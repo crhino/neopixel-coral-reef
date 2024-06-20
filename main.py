@@ -39,10 +39,12 @@ barnacle = PixelSubset(pixels, 36, 37)
 
 # Color cycles
 # TODO: fix colors better
-cyan_to_blue = color_cycle_array(CYAN, AQUA)
-blue_to_dark_blue = color_cycle_array(AQUA, BLUE)
-blue_green_to_dark_green = color_cycle_array(BLUE, GREEN)
-light_green_to_blue = color_cycle_array(GREEN, AQUA)
+
+steps = 10
+cyan_to_blue = color_cycle_array(CYAN, AQUA, steps)
+blue_to_dark_blue = color_cycle_array(AQUA, BLUE, steps)
+blue_green_to_dark_green = color_cycle_array(BLUE, GREEN, steps)
+light_green_to_blue = color_cycle_array(GREEN, AQUA, steps)
 
 # Setup animations
 # TODO: add delay to the cycle
