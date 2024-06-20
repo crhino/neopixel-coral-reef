@@ -30,12 +30,12 @@ pixel_num = 50
 pixels = neopixel.NeoPixel(
     pixel_pin, pixel_num, brightness=1, auto_write=False)
 
-# Objects on Pillar
-rock = PixelSubset(pixels, 49, 49)
-shelf = PixelSubset(pixels, 44, 46)
-small_brain = PixelSubset(pixels, 41, 41)
-big_brain = PixelSubset(pixels, 38, 39)
-barnacle = PixelSubset(pixels, 36, 36)
+# Objects on Pillar, not end number is non-inclusive
+rock = PixelSubset(pixels, 49, 50)
+shelf = PixelSubset(pixels, 44, 47)
+small_brain = PixelSubset(pixels, 41, 42)
+big_brain = PixelSubset(pixels, 38, 40)
+barnacle = PixelSubset(pixels, 36, 37)
 
 # Color cycles
 # TODO: fix colors better
