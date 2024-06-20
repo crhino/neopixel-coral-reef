@@ -3,7 +3,7 @@ import board
 import neopixel
 from adafruit_led_animation.color import CYAN, BLUE, AQUA, GREEN
 from adafruit_led_animation.animation.colorcycle import ColorCycle
-from adafruit_led_animation.animation.helper import PixelSubset
+from adafruit_led_animation.helper import PixelSubset
 from adafruit_led_animation.sequence import AnimationSequence
 from adafruit_led_animation.group import AnimationGroup
 
