@@ -1,4 +1,3 @@
-import itertools
 import board
 import neopixel
 from adafruit_led_animation.color import CYAN, BLUE, AQUA, GREEN
@@ -12,7 +11,7 @@ from adafruit_led_animation.group import AnimationGroup
 
 def color_cycle_array(start, end, steps):
     list(map(lambda step: interpolate_color_between(
-        start, end, step/steps), itertools.count(steps)))
+        start, end, step/steps), [i for i in range(steps)]))
 
 
 def interpolate_color_between(color1, color2, ratio):
