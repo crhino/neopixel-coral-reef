@@ -48,10 +48,10 @@ light_green_to_blue = color_cycle_array(GREEN, AQUA, steps)
 # Setup animations
 # TODO: add delay to the cycle
 rock_animation = ColorCycle(rock, 1, cyan_to_blue)
-shelf_animation = ColorCycle(rock, 1, blue_to_dark_blue)
-sm_brain_animation = ColorCycle(rock, 1, blue_green_to_dark_green)
-big_brain_animation = ColorCycle(rock, 1, light_green_to_blue)
-barnacle_animation = ColorCycle(rock, 1, cyan_to_blue)
+shelf_animation = ColorCycle(shelf, 1, blue_to_dark_blue)
+sm_brain_animation = ColorCycle(small_brain, 1, blue_green_to_dark_green)
+big_brain_animation = ColorCycle(big_brain, 1, light_green_to_blue)
+barnacle_animation = ColorCycle(barnacle, 1, cyan_to_blue)
 
 animations = AnimationSequence(
     AnimationGroup(
