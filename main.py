@@ -27,7 +27,8 @@ pixel_pin = board.D18
 pixel_num = 50
 
 pixels = neopixel.NeoPixel(
-    pixel_pin, pixel_num, brightness=1, auto_write=False)
+    pixel_pin, pixel_num, brightness=1, auto_write=False,
+    pixel_order=neopixel.RGB)
 
 # Objects on Pillar, not end number is non-inclusive
 rock = PixelSubset(pixels, 49, 50)
