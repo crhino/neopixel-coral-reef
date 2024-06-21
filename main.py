@@ -1,6 +1,6 @@
 import board
 import neopixel
-from adafruit_led_animation.color import CYAN, BLUE, AQUA, GREEN
+from adafruit_led_animation.color import CYAN, BLUE, PURPLE, GREEN
 from adafruit_led_animation.animation.colorcycle import ColorCycle
 from adafruit_led_animation.helper import PixelSubset
 from adafruit_led_animation.sequence import AnimationSequence
@@ -41,15 +41,15 @@ barnacle = PixelSubset(pixels, 36, 37)
 # TODO: fix colors better
 
 steps = 50
-cyan_to_blue = color_cycle_array(CYAN, AQUA, steps)
-blue_to_dark_blue = color_cycle_array(AQUA, BLUE, steps)
+cyan_to_blue = color_cycle_array(CYAN, BLUE, steps)
+blue_to_purple = color_cycle_array(BLUE, PURPLE, steps)
 blue_green_to_dark_green = color_cycle_array(BLUE, GREEN, steps)
-light_green_to_blue = color_cycle_array(GREEN, AQUA, steps)
+light_green_to_blue = color_cycle_array(GREEN, CYAN, steps)
 
 # Setup animations
 # TODO: add delay to the cycle
 rock_animation = ColorCycle(rock, 1, cyan_to_blue)
-shelf_animation = ColorCycle(shelf, 1, blue_green_to_dark_green)
+shelf_animation = ColorCycle(shelf, 1, blue_to_purple)
 sm_brain_animation = ColorCycle(small_brain, 1, blue_green_to_dark_green)
 big_brain_animation = ColorCycle(big_brain, 1, light_green_to_blue)
 barnacle_animation = ColorCycle(barnacle, 1, light_green_to_blue)
