@@ -10,7 +10,7 @@ from adafruit_led_animation.group import AnimationGroup
 
 
 def color_cycle_array(start, end, steps):
-    list(map(lambda step: interpolate_color_between(
+    return list(map(lambda step: interpolate_color_between(
         start, end, step/steps), [i for i in range(steps)]))
 
 
@@ -39,7 +39,7 @@ barnacle = PixelSubset(pixels, 36, 37)
 # Color cycles
 # TODO: fix colors better
 
-steps = 10
+steps = 50
 cyan_to_blue = color_cycle_array(CYAN, AQUA, steps)
 blue_to_dark_blue = color_cycle_array(AQUA, BLUE, steps)
 blue_green_to_dark_green = color_cycle_array(BLUE, GREEN, steps)
