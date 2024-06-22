@@ -32,10 +32,11 @@ pixels = neopixel.NeoPixel(
 
 # Objects on Pillar, not end number is non-inclusive
 rock = PixelSubset(pixels, 49, 50)
-shelf = PixelSubset(pixels, 44, 47)
+shelf = PixelSubset(pixels, 45, 48)
+antler = PixelSubset(pixels, 42, 45)
 small_brain = PixelSubset(pixels, 41, 42)
 big_brain = PixelSubset(pixels, 38, 40)
-barnacle = PixelSubset(pixels, 36, 37)
+barnacle = PixelSubset(pixels, 35, 37)
 
 # Color cycles
 # TODO: fix colors better
@@ -49,14 +50,16 @@ light_green_to_blue = color_cycle_array(GREEN, CYAN, steps)
 # Setup animations
 # TODO: add delay to the cycle
 rock_animation = ColorCycle(rock, 1, cyan_to_blue)
+antler_animation = ColorCycle(antler, 1, light_green_to_blue)
 shelf_animation = ColorCycle(shelf, 1, blue_to_purple)
 sm_brain_animation = ColorCycle(small_brain, 1, blue_green_to_dark_green)
 big_brain_animation = ColorCycle(big_brain, 1, light_green_to_blue)
-barnacle_animation = ColorCycle(barnacle, 1, light_green_to_blue)
+barnacle_animation = ColorCycle(barnacle, 1, blue_green_to_dark_green)
 
 animations = AnimationSequence(
     AnimationGroup(
         rock_animation,
+        antler_animation,
         shelf_animation,
         sm_brain_animation,
         big_brain_animation,
