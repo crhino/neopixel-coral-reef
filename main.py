@@ -37,7 +37,7 @@ antler = PixelSubset(pixels, 42, 45)
 small_brain = PixelSubset(pixels, 41, 42)
 big_brain = PixelSubset(pixels, 38, 40)
 barnacle = PixelSubset(pixels, 35, 37)
-branch = PixelSubset(pixels, 32, 33)
+branch = PixelSubset(pixels, 32, 34)
 
 # Color cycles
 # TODO: fix colors better
