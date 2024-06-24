@@ -37,6 +37,7 @@ antler = PixelSubset(pixels, 42, 45)
 small_brain = PixelSubset(pixels, 41, 42)
 big_brain = PixelSubset(pixels, 38, 40)
 barnacle = PixelSubset(pixels, 35, 37)
+branch = PixelSubset(pixels, 33, 34)
 
 # Color cycles
 # TODO: fix colors better
@@ -55,6 +56,7 @@ shelf_animation = ColorCycle(shelf, 1, blue_to_purple)
 sm_brain_animation = ColorCycle(small_brain, 1, blue_green_to_dark_green)
 big_brain_animation = ColorCycle(big_brain, 1, light_green_to_blue)
 barnacle_animation = ColorCycle(barnacle, 1, blue_green_to_dark_green)
+branch_animation = ColorCycle(branch, 1, blue_green_to_dark_green)
 
 animations = AnimationSequence(
     AnimationGroup(
@@ -64,6 +66,7 @@ animations = AnimationSequence(
         sm_brain_animation,
         big_brain_animation,
         barnacle_animation,
+        branch_animation,
     ),
 )
 
