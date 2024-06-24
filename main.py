@@ -53,7 +53,7 @@ light_green_to_blue = color_cycle_array(GREEN, CYAN, steps)
 
 # Setup animations
 # TODO: add delay to the cycle
-speed = 0.25
+speed = 0.2
 rock_animation = ColorCycle(rock, speed, cyan_to_blue)
 antler_animation = ColorCycle(antler, speed, light_green_to_blue)
 shelf_animation = ColorCycle(shelf, speed, blue_to_purple)
