@@ -10,8 +10,10 @@ from adafruit_led_animation.group import AnimationGroup
 
 
 def color_cycle_array(start, end, steps):
-    return list(map(lambda step: interpolate_color_between(
+    colors = list(map(lambda step: interpolate_color_between(
         start, end, step/steps), [i for i in range(steps)]))
+    colors.extend(colors[::-1])
+    return colors
 
 
 def interpolate_color_between(color1, color2, ratio):
@@ -51,14 +53,15 @@ light_green_to_blue = color_cycle_array(GREEN, CYAN, steps)
 
 # Setup animations
 # TODO: add delay to the cycle
-rock_animation = ColorCycle(rock, 1, cyan_to_blue)
-antler_animation = ColorCycle(antler, 1, light_green_to_blue)
-shelf_animation = ColorCycle(shelf, 1, blue_to_purple)
-sm_brain_animation = ColorCycle(small_brain, 1, blue_green_to_dark_green)
-big_brain_animation = ColorCycle(big_brain, 1, light_green_to_blue)
-barnacle_animation = ColorCycle(barnacle, 1, blue_green_to_dark_green)
-branch1_animation = ColorCycle(branch1, 1, blue_to_purple)
-branch2_animation = ColorCycle(branch2, 1, blue_to_purple)
+speed = 0.25
+rock_animation = ColorCycle(rock, speed, cyan_to_blue)
+antler_animation = ColorCycle(antler, speed, light_green_to_blue)
+shelf_animation = ColorCycle(shelf, speed, blue_to_purple)
+sm_brain_animation = ColorCycle(small_brain, speed, blue_green_to_dark_green)
+big_brain_animation = ColorCycle(big_brain, speed, light_green_to_blue)
+barnacle_animation = ColorCycle(barnacle, speed, blue_green_to_dark_green)
+branch1_animation = ColorCycle(branch1, speed, blue_to_purple)
+branch2_animation = ColorCycle(branch2, speed, blue_to_purple)
 
 animations = AnimationSequence(
     AnimationGroup(
