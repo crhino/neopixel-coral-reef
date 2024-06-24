@@ -58,10 +58,10 @@ rock_animation = ColorCycle(rock, speed, cyan_to_blue)
 antler_animation = ColorCycle(antler, speed, light_green_to_blue)
 shelf_animation = ColorCycle(shelf, speed, blue_to_purple)
 sm_brain_animation = ColorCycle(small_brain, speed, blue_green_to_dark_green)
-big_brain_animation = ColorCycle(big_brain, speed, light_green_to_blue)
+big_brain_animation = ColorCycle(big_brain, speed, blue_to_purple)
 barnacle_animation = ColorCycle(barnacle, speed, blue_green_to_dark_green)
-branch1_animation = ColorCycle(branch1, speed, blue_to_purple)
-branch2_animation = ColorCycle(branch2, speed, blue_to_purple)
+branch1_animation = ColorCycle(branch1, speed, light_green_to_blue)
+branch2_animation = ColorCycle(branch2, speed, light_green_to_blue)
 
 animations = AnimationSequence(
     AnimationGroup(
