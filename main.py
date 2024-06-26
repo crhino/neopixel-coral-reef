@@ -76,6 +76,7 @@ animations = AnimationSequence(
         barnacle_animation,
         branch1_animation,
         branch2_animation,
+        moray_animation,
     ),
 )
 
