@@ -32,16 +32,22 @@ pixels = neopixel.NeoPixel(
     pixel_pin, pixel_num, brightness=1, auto_write=False,
     pixel_order=neopixel.RGB)
 
-# Objects on Pillar, not end number is non-inclusive
-rock = PixelSubset(pixels, 49, 50)
-shelf = PixelSubset(pixels, 45, 48)
-antler = PixelSubset(pixels, 42, 45)
-small_brain = PixelSubset(pixels, 41, 42)
-big_brain = PixelSubset(pixels, 38, 40)
-barnacle = PixelSubset(pixels, 35, 37)
-branch1 = PixelSubset(pixels, 32, 33)
-branch2 = PixelSubset(pixels, 34, 35)
-moray = PixelSubset(pixels, 31, 32)
+# Objects on Pillar, end number is non-inclusive
+rock = PixelSubset(pixels, 27, 28)
+shelf = PixelSubset(pixels, 20, 23)
+antler = PixelSubset(pixels, 17, 20)
+small_brain = PixelSubset(pixels, 7, 8)
+big_brain = PixelSubset(pixels, 9, 11)
+barnacle = PixelSubset(pixels, 12, 14)
+branch1 = PixelSubset(pixels, 14, 15)
+branch2 = PixelSubset(pixels, 24, 25)
+moray = PixelSubset(pixels, 26, 27)
+pipe_barnacle1 = PixelSubset(pixels, 29, 30)
+pointy_lips1 = PixelSubset(pixels, 31, 32)
+pipe_barnacle2 = PixelSubset(pixels, 34, 35)
+pointy_lips2 = PixelSubset(pixels, 36, 37)
+pointy_lips3 = PixelSubset(pixels, 38, 39)
+crab_on_coral = PixelSubset(pixels, 41, 42)
 
 # Color cycles
 # TODO: fix colors better
@@ -65,6 +71,12 @@ barnacle_animation = ColorCycle(barnacle, speed, blue_green_to_dark_green)
 branch1_animation = ColorCycle(branch1, speed, light_green_to_blue)
 branch2_animation = ColorCycle(branch2, speed, light_green_to_blue)
 moray_animation = ColorCycle(moray, speed, yellow_to_green)
+pipe1_animation = ColorCycle(moray, speed, cyan_to_blue)
+pipe2_animation = ColorCycle(moray, speed, blue_to_purple)
+lips1_animation = ColorCycle(moray, speed, blue_green_to_dark_green)
+lips2_animation = ColorCycle(moray, speed, light_green_to_blue)
+lips3_animation = ColorCycle(moray, speed, cyan_to_blue)
+crab_animation = ColorCycle(moray, speed, light_green_to_blue)
 
 animations = AnimationSequence(
     AnimationGroup(
