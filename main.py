@@ -71,12 +71,12 @@ barnacle_animation = ColorCycle(barnacle, speed, blue_green_to_dark_green)
 branch1_animation = ColorCycle(branch1, speed, light_green_to_blue)
 branch2_animation = ColorCycle(branch2, speed, light_green_to_blue)
 moray_animation = ColorCycle(moray, speed, yellow_to_green)
-pipe1_animation = ColorCycle(moray, speed, cyan_to_blue)
-pipe2_animation = ColorCycle(moray, speed, blue_to_purple)
-lips1_animation = ColorCycle(moray, speed, blue_green_to_dark_green)
-lips2_animation = ColorCycle(moray, speed, light_green_to_blue)
-lips3_animation = ColorCycle(moray, speed, cyan_to_blue)
-crab_animation = ColorCycle(moray, speed, light_green_to_blue)
+pipe1_animation = ColorCycle(pipe_barnacle1, speed, cyan_to_blue)
+pipe2_animation = ColorCycle(pipe_barnacle2, speed, blue_to_purple)
+lips1_animation = ColorCycle(pointy_lips1, speed, blue_green_to_dark_green)
+lips2_animation = ColorCycle(pointy_lips2, speed, light_green_to_blue)
+lips3_animation = ColorCycle(pointy_lips3, speed, cyan_to_blue)
+crab_animation = ColorCycle(crab_on_coral, speed, light_green_to_blue)
 
 animations = AnimationSequence(
     AnimationGroup(
@@ -89,6 +89,12 @@ animations = AnimationSequence(
         branch1_animation,
         branch2_animation,
         moray_animation,
+        pipe1_animation,
+        pipe2_animation,
+        lips1_animation,
+        lips2_animation,
+        lips3_animation,
+        crab_animation,
     ),
 )
 
