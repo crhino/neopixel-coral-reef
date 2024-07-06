@@ -8,7 +8,6 @@ from adafruit_led_animation.group import AnimationGroup
 DARK_BLUE = (3,5,99)
 DARK_GREEN = (25,89,25)
 
-
 # construct color cycles given start and end colors
 
 
