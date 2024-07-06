@@ -7,6 +7,9 @@ from adafruit_led_animation.sequence import AnimationSequence
 from adafruit_led_animation.group import AnimationGroup
 DARK_BLUE = (3,5,99)
 DARK_GREEN = (25,89,25)
+BLUE_GREEN = (44,130,110)
+LIGHT_GREEN = (169,245,125)
+MED_BLUE = (27,165,250)
 
 # construct color cycles given start and end colors
 
@@ -57,8 +60,8 @@ crab_on_coral = PixelSubset(pixels, 41, 42)
 steps = 50
 cyan_to_blue = color_cycle_array(CYAN, BLUE, steps)
 blue_to_purple = color_cycle_array(BLUE, PURPLE, steps)
-blue_green_to_dark_green = color_cycle_array(BLUE, GREEN, steps)
-light_green_to_blue = color_cycle_array(GREEN, CYAN, steps)
+blue_green_to_dark_green = color_cycle_array(BLUE_GREEN, DARK_GREEN, steps)
+light_green_to_blue = color_cycle_array(LIGHT_GREEN, MED_BLUE, steps)
 yellow_to_green = color_cycle_array(YELLOW, GREEN, steps)
 
 # Setup animations
