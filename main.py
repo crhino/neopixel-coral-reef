@@ -13,7 +13,7 @@ MED_BLUE = (27,165,250)
 YELLOW_ORANGE = (250,224,27)
 GREEN_YELLOW = (213,250,65)
 TEAL = (45,128,140)
-BLACK = (30,33,33)
+DARK_PURPLE = (81,45,140)
 
 # construct color cycles given start and end colors
 
@@ -59,34 +59,39 @@ pointy_lips3 = PixelSubset(pixels, 38, 39)
 crab_on_coral = PixelSubset(pixels, 41, 42)
 
 # Color cycles
-# TODO: fix colors better
 
 steps = 50
 cyan_to_blue = color_cycle_array(CYAN, BLUE, steps)
 blue_to_purple = color_cycle_array(BLUE, PURPLE, steps)
 blue_green_to_dark_green = color_cycle_array(BLUE_GREEN, DARK_GREEN, steps)
-light_green_to_blue = color_cycle_array(LIGHT_GREEN, MED_BLUE, steps)
-black_to_teal = color_cycle_array(BLACK, TEAL, steps)
+light_green_to_med_blue = color_cycle_array(LIGHT_GREEN, MED_BLUE, steps)
+dark_purple_to_teal = color_cycle_array(DARK_PURPLE, TEAL, steps)
 yellow_orange_to_green_yellow = color_cycle_array(YELLOW_ORANGE, GREEN_YELLOW, steps)
 
 # Setup animations
 # TODO: add delay to the cycle
 speed = 0.2
-rock_animation = ColorCycle(rock, speed, cyan_to_blue)
-antler_animation = ColorCycle(antler, speed, light_green_to_blue)
-shelf_animation = ColorCycle(shelf, speed, blue_to_purple)
-sm_brain_animation = ColorCycle(small_brain, speed, blue_green_to_dark_green)
-big_brain_animation = ColorCycle(big_brain, speed, blue_to_purple)
-barnacle_animation = ColorCycle(barnacle, speed, blue_green_to_dark_green)
-branch1_animation = ColorCycle(branch1, speed, light_green_to_blue)
-branch2_animation = ColorCycle(branch2, speed, light_green_to_blue)
-moray_animation = ColorCycle(moray, speed, yellow_orange_to_green_yellow)
-pipe1_animation = ColorCycle(pipe_barnacle1, speed, blue_green_to_dark_green)
-pipe2_animation = ColorCycle(pipe_barnacle2, speed, blue_green_to_dark_green)
+crab_animation = ColorCycle(crab_on_coral, speed, dark_purple_to_teal)
 lips1_animation = ColorCycle(pointy_lips1, speed, blue_to_purple)
 lips2_animation = ColorCycle(pointy_lips2, speed, blue_to_purple)
 lips3_animation = ColorCycle(pointy_lips3, speed, blue_to_purple)
-crab_animation = ColorCycle(crab_on_coral, speed, black_to_teal)
+pipe1_animation = ColorCycle(pipe_barnacle1, speed, light_green_to_med_blue)
+pipe2_animation = ColorCycle(pipe_barnacle2, speed, light_green_to_med_blue)
+rock_animation = ColorCycle(rock, speed, blue_green_to_dark_green)
+moray_animation = ColorCycle(moray, speed, yellow_orange_to_green_yellow)
+shelf_animation = ColorCycle(shelf, speed, cyan_to_blue)
+branch1_animation = ColorCycle(branch1, speed, light_green_to_med_blue)
+branch2_animation = ColorCycle(branch2, speed, light_green_to_med_blue)
+barnacle_animation = ColorCycle(barnacle, speed, blue_green_to_dark_green)
+antler_animation = ColorCycle(antler, speed, dark_purple_to_teal)
+big_brain_animation = ColorCycle(big_brain, speed, blue_to_purple)
+sm_brain_animation = ColorCycle(small_brain, speed, cyan_to_blue)
+
+
+
+
+
+
 
 animations = AnimationSequence(
     AnimationGroup(
