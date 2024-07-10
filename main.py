@@ -62,16 +62,16 @@ crab_on_coral = PixelSubset(pixels, 41, 42)
 steps = 50
 cyan_to_blue = color_cycle_array(CYAN, BLUE, steps)
 blue_to_purple = color_cycle_array(BLUE, PURPLE, steps)
-green_to_yellow_orange = color_cycle_array(GREEN, YELLOW_ORANGE, steps)
+green_to_light_green = color_cycle_array(GREEN, LIGHT_GREEN, steps)
 blue_green_to_dark_green = color_cycle_array(BLUE_GREEN, DARK_GREEN, steps)
 light_green_to_med_blue = color_cycle_array(LIGHT_GREEN, MED_BLUE, steps)
-dark_purple_to_teal = color_cycle_array(DARK_PURPLE, TEAL, steps)
+dark_purple_to_green = color_cycle_array(DARK_PURPLE, GREEN, steps)
 yellow_orange_to_green_yellow = color_cycle_array(YELLOW_ORANGE, GREEN_YELLOW, steps)
 
 # Setup animations
 # TODO: add delay to the cycle
 speed = 0.2
-crab_animation = ColorCycle(crab_on_coral, speed, dark_purple_to_teal)
+crab_animation = ColorCycle(crab_on_coral, speed, dark_purple_to_green)
 lips1_animation = ColorCycle(pointy_lips1, speed, blue_to_purple)
 lips2_animation = ColorCycle(pointy_lips2, speed, blue_to_purple)
 lips3_animation = ColorCycle(pointy_lips3, speed, blue_to_purple)
@@ -83,9 +83,9 @@ shelf_animation = ColorCycle(shelf, speed, cyan_to_blue)
 branch1_animation = ColorCycle(branch1, speed, light_green_to_med_blue)
 branch2_animation = ColorCycle(branch2, speed, light_green_to_med_blue)
 barnacle_animation = ColorCycle(barnacle, speed, blue_green_to_dark_green)
-antler_animation = ColorCycle(antler, speed, green_to_yellow_orange)
-big_brain_animation = ColorCycle(big_brain, speed, dark_purple_to_teal)
-sm_brain_animation = ColorCycle(small_brain, speed, cyan_to_blue)
+antler_animation = ColorCycle(antler, speed, green_to_light_green)
+big_brain_animation = ColorCycle(big_brain, speed, cyan_to_blue)
+sm_brain_animation = ColorCycle(small_brain, speed, dark_purple_to_green)
 
 
 
