@@ -8,15 +8,14 @@ from adafruit_led_animation.group import AnimationGroup
 DARK_BLUE = (3,5,99)
 DARK_GREEN = (25,89,25)
 BLUE_GREEN = (44,130,110)
-LIGHT_GREEN = (169,245,125)
-MED_BLUE = (27,165,250)
+LIGHT_GREEN = (114,245,2)
+MED_BLUE = (5,165,250)
 YELLOW_ORANGE = (250,224,27)
 GREEN_YELLOW = (213,250,65)
 TEAL = (45,128,140)
-DARK_PURPLE = (81,45,140)
+DARK_PURPLE = (128,5,247)
 
 # construct color cycles given start and end colors
-
 
 def color_cycle_array(start, end, steps):
     colors = list(map(lambda step: interpolate_color_between(
@@ -41,7 +40,7 @@ pixels = neopixel.NeoPixel(
     pixel_pin, pixel_num, brightness=1, auto_write=False,
     pixel_order=neopixel.RGB)
 
-# Objects on Pillar, end number is non-inclusive
+# LED # for each objects on Pillar, end number is non-inclusive
 rock = PixelSubset(pixels, 27, 28)
 shelf = PixelSubset(pixels, 20, 23)
 antler = PixelSubset(pixels, 17, 20)
@@ -63,6 +62,7 @@ crab_on_coral = PixelSubset(pixels, 41, 42)
 steps = 50
 cyan_to_blue = color_cycle_array(CYAN, BLUE, steps)
 blue_to_purple = color_cycle_array(BLUE, PURPLE, steps)
+green_to_yellow_orange = color_cycle_array(GREEN, YELLOW_ORANGE, steps)
 blue_green_to_dark_green = color_cycle_array(BLUE_GREEN, DARK_GREEN, steps)
 light_green_to_med_blue = color_cycle_array(LIGHT_GREEN, MED_BLUE, steps)
 dark_purple_to_teal = color_cycle_array(DARK_PURPLE, TEAL, steps)
@@ -83,8 +83,8 @@ shelf_animation = ColorCycle(shelf, speed, cyan_to_blue)
 branch1_animation = ColorCycle(branch1, speed, light_green_to_med_blue)
 branch2_animation = ColorCycle(branch2, speed, light_green_to_med_blue)
 barnacle_animation = ColorCycle(barnacle, speed, blue_green_to_dark_green)
-antler_animation = ColorCycle(antler, speed, dark_purple_to_teal)
-big_brain_animation = ColorCycle(big_brain, speed, blue_to_purple)
+antler_animation = ColorCycle(antler, speed, green_to_yellow_orange)
+big_brain_animation = ColorCycle(big_brain, speed, dark_purple_to_teal)
 sm_brain_animation = ColorCycle(small_brain, speed, cyan_to_blue)
 
 
